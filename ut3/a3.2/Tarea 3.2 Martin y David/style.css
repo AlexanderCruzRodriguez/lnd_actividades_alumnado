@@ -18,10 +18,42 @@ h1{
     text-align: center;
     color: rgb(4, 0, 228);
 }
+
 .h1:hover{
     text-align: center;
     background-color: blue;
     color: red;
     margin-left: 425px;
     margin-right: 425px;
+}
+
+.imagen1 {
+    width: 150px;
+    height: auto;
+  }
+
+.imagen2 {
+    width: 150px;
+    height: auto;
+  }
+
+.imagen3 {
+    width: 150px; 
+    height: auto;
+  }
+
+img {
+    border: 3px solid;
+}
+
+table img {
+    border-color: blue;
+}
+
+div img {
+    border-color: yellow;
+}
+
+p img {
+    border-color: red;
 }
