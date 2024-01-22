@@ -1,0 +1,27 @@
+label{
+    color: blue;
+}
+
+.contrasena{
+    color: red;
+}
+
+#contrasena:focus{
+    outline: 3px solid red;
+}
+
+h1{
+    color: rgb(3, 3, 163);
+}
+
+.h1{
+    text-align: center;
+    color: rgb(4, 0, 228);
+}
+.h1:hover{
+    text-align: center;
+    background-color: blue;
+    color: red;
+    margin-left: 425px;
+    margin-right: 425px;
+}
