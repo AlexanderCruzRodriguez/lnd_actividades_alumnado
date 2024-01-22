@@ -1,0 +1,38 @@
+h1 {
+    color: #FF5733;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    background-clip: text;
+}
+h1:hover {
+    background-color: #FFC300;
+}
+label {
+    color: #1E90FF;
+}
+input[type="text"] {
+    border: 2px solid #000;
+}
+input[type="text"]:focus {
+    border: 2px solid #FF5733;
+}
+input[type="password"] {
+    outline: 2px solid #000000;
+}
+input[type="password"]:focus {
+    outline: 2px solid #f84219;
+}
+img {
+    border: 2px solid;
+    border-color: red green blue
+}
+table img {
+    border-color: red;
+}
+div img {
+    border-color: green;
+}
+p img {
+    border-color: blue;
+}
