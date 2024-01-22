@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Entrenamientos</title>
+
+  <!-- Hoja de estilo externa -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Hoja de estilo interna -->
+  <style>
+    h1 {
+      color: #336699;
+      transition: background-color 0.3s;
+    }
+
+    h1:hover {
+      background-color: #f0f0f0;
+    }
+
+    h1 span {
+      background-color: #f0f0f0;
+      transition: background-color 0.3s;
+    }
+
+    h1:hover span {
+      background-color: transparent;
+    }
+
+    /* Estilos internos para el formulario */
+    label {
+      color: #336699;
+    }
+
+    label.rojo {
+      color: red;
+    }
+
+    input[type="text"].borde-rojo {
+      border: 1px solid #ff0000;
+    }
+
+    input[type="text"].borde-outline {
+      outline: 2px solid #00ff00;
+    }
+
+    /* Estilos para cambiar el color del borde de las imágenes */
+    img {
+      border: 2px solid;
+    }
+
+    table img {
+      border-color: blue;
+    }
+
+    div img {
+      border-color: green;
+    }
+
+    p img {
+      border-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><span>Registro de Entrenamientos</span></h1>
+  <form action="http://servidor/lnd_actividades_alumnado/ut3/a3.2/recibe_formulario.php" method="POST" enctype="multipart/form-data">
+    <table>
+        <tr>
+          <td colspan="2" style="text-align: center;"><strong>Datos de Entrenamiento</strong></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="DNI" class="red-text">DNI:</label></td>
+          <td><input type="text" id="dni" name="dni" maxlength="9" required></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="nombre_apellidos">Nombre y Apellidos*:</label></td>
+          <td><input type="text" id="nombre_apellidos" name="nombre_apellidos" maxlength="100" required></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="telefono">Teléfono:</label></td>
+          <td><input type="text" id="telefono" name="telefono" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="Formato: 928-XX-XX-XX"></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="email">Email*:</label></td>
+          <td><input type="email" id="email" name="email" required pattern="^[a-zA-Z0-9_.+-]+@gmail.com$"></td>
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="password" style="color: red;">Contraseña*:</label></td>
+          <td><input type="password" id="password" name="password" minlength="5" maxlength="10" required></td>          
+        </tr>
+        <tr>
+          <td style="text-align: right;"><label for="fecha_entrenamiento">Fecha del Entrenamiento*:</label></td>
+          <td><input type="date" id="fecha_entrenamiento" name="fecha_entrenamiento" max="2023-12-31" required></td>
+        </tr>
+        <!-- Resto de campos, teclado limitado por extensión de texto -->
+        <!-- ... -->
+        <!-- Campo oculto con tu nombre y apellidos -->
+        <input type="hidden" name="alumno" value="TuNombreCompleto">
+        
+  
+          </tr>
+          <!-- ... Otros campos ... -->
+          <tr>
+            <td style="text-align: right;"><label for="imagenes_entrenamiento">Imágenes del Entrenamiento:</label></td>
+            <td><input type="file" id="imagenes_entrenamiento" name="imagenes_entrenamiento[]" accept="image/jpeg" multiple></td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><label for="rutina_ejercicios">Rutina de Ejercicios (PDF):</label></td>
+            <td><input type="file" id="rutina_ejercicios" name="rutina_ejercicios" accept=".pdf"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><label for="agua_consumida">Cantidad de Agua Consumida:</label></td>
+            <td><input type="number" id="agua_consumida" name="agua_consumida" min="0" step="0.5" value="0.5"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><label for="nivel_esfuerzo">Valoración Nivel de Esfuerzo (*):</label></td>
+            <td><input type="range" id="nivel_esfuerzo" name="nivel_esfuerzo" min="1" max="10" value="5"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><label for="tipo_entrenamiento">Tipo de Entrenamiento (*):</label></td>
+            <td>
+              <select id="tipo_entrenamiento" name="tipo_entrenamiento" required>
+                <option value="aerobico">Aeróbico</option>
+                <option value="anaerobico">Anaeróbico</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><label for="salas_utilizadas">Salas Utilizadas (*):</label></td>
+            <td>
+              <select id="salas_utilizadas" name="salas_utilizadas[]" multiple required>
+                <option value="pista_exterior">Pista Exterior</option>
+                <option value="piscina">Piscina</option>
+                <option value="sala_musculacion">Sala de Musculación</option>
+                <option value="sala_spinning">Sala de Spinning</option>
+                <option value="sala_polivalente">Sala Polivalente</option>
+                <option value="zona_cardio">Zona Cardio</option>
+              </select>
+            </td>
+          </tr>
+          <!-- Resto de campos y botones -->
+          <!-- ... -->
+          <!-- Fila de botones -->
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Guardar Entrenamiento">
+            <input type="reset" value="Limpiar Campos">
+          </td>
+        </table>
+      </form>
+
+  <!-- Código HTML para probar los estilos de imágenes -->
+  <table>
+    <tr>
+      <td><img src="c:\Users\rubencruz\Desktop\GitHub\lnd_actividades_alumnado\ut3\a3.2\tarea 3.2 ruben e ian\images\descarga.jfif" alt="Imagen en tabla"></td>
+    </tr>
+  </table>
+
+  <div><img src="c:\Users\rubencruz\Desktop\GitHub\lnd_actividades_alumnado\ut3\a3.2\tarea 3.2 ruben e ian\images\descarga (2).jfif" alt="Imagen en div"></div>
+
+  <p><img src="c:\Users\rubencruz\Desktop\GitHub\lnd_actividades_alumnado\ut3\a3.2\tarea 3.2 ruben e ian\images\descarga (1).jfif" alt="Imagen en párrafo"></p>
+</body>
+</html>
