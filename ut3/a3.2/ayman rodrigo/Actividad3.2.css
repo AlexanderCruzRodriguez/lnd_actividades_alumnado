@@ -1,0 +1,21 @@
+label{
+    color:blue;
+}
+#rojo{
+    color: red;
+}
+input:focus{
+    border-style: solid;
+    border-color: red;
+    border-width: 3px;
+}
+#outlin:focus{
+    outline: 3px solid green;
+}
+h1{
+    color: red;
+}
+p:hover{
+    background: black;
+    display: inline-block;
+}

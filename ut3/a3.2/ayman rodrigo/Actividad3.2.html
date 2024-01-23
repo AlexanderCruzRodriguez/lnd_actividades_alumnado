@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            border: 3px solid black;
+        }
+    </style>
+    <link rel="stylesheet" href="./Actividad3.2.css">
+</head>
+
+
+<body>
+    <h1 align="center"> <p> Titulo H1 </p> </h1>
+    <form method="post" action="https://webhook.site/7fbfd2fe-8622-4e1a-aa6e-e7061e9ea920">
+
+        <input id="nombre" name="nombre" type="hidden"
+            value="Ayman Oulad Haroun Zarkik y Rodrigo Mogollon Quijandria" />
+
+        <table class="default" align="center" border="1">
+            <tr>
+                <td colspan="2" align="center"> <label for="text"> Creación de formulario HTML </label> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="dni"> DNI </label> </td>
+                <td> <input id="outlin" name="dni" type="text" maxlength="9" required> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="nombreapllidos"> Nombre y apellidos </label> </td>
+                <td> <input name="nombreapllidos" type="text" maxlength="100" required> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="password"> Contraseña </label> </td>
+                <td> <input name="Contraseña" type="password" minlength="5" maxlength="10" required> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="teléfono" id="rojo"> Telefono </label> </td>
+                <td> <input name="teléfono" type="text" maxlength="12" placeholder="928-xx-xx-xx"> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="text"> Correo electrónico </label> </td>
+                <td> <input type="email" name="mail" id="mail" pattern=".+@gmail.com" size="30" required /> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="text"> Fecha del entrenamiento </label> </td>
+                <td> <input min="2023-01-01" name="Fecha del entrenamiento" required /> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="imagenes"> Imágenes del entrenamiento </label> </td>
+                <td> <input name="Imágenes del entrenamiento" type="file" accept=".jpg"> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="rutina"> Rutina de ejercicios </label> </td>
+                <td> <input type="file" id="rutina" name="rutina" accept=".pdf" /> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="agua">Agua consumida (litros):</label> </td>
+                <td> <input type="number" id="agua" name="agua" value="0.5" max="10" placeholder="0.5" step="0.1" />
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="text"> Valoración del nivel de esfuerzo</label></td>
+                <td> <input name="Esfuerzo" type="range" min="0" max="10" step="1" /> </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="tipo"> Tipo de entrenamiento: </label> </td>
+                <td>
+                    <select name="Tipo de entrenamiento" id="tipo" required>
+                        <option value="aeróbico">aeróbico</option>
+                        <option value="anaeróbico">anaeróbico</option>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right"> <label for="salasutilizadas"> Salas utilizadas </label> </td>
+                <td>
+                    <input type="checkbox" id="pista" name="pista" value="pista exterior">
+                    <label for="pista"> pista exterior </label><br>
+                    <input type="checkbox" id="piscina" name="piscina" value="piscina">
+                    <label for="piscina"> piscina </label><br>
+                    <input type="checkbox" id="sala de musculación" name="sala de musculación" value="sala de musculación">
+                    <label for="sala de musculación"> sala de musculación </label><br>
+                    <input type="checkbox" id="sala de spinning" name="sala de spinning" value="sala de spinning">
+                    <label for="sala de spinning"> sala de spinning</label><br>
+                    <input type="checkbox" id="sala polivalente" name="sala polivalente" value="sala polivalente">
+                    <label for="sala polivalente"> sala polivalente</label><br>
+                    <input type="checkbox" id="zona cardio" name="zona cardio" value="zona cardio">
+                    <label for="zona cardio"> zona cardio</label><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <p align="center"> <input type="reset" value="Borrar"> <input type="submit"></p>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
