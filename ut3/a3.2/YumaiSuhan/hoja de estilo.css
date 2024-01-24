@@ -1,0 +1,40 @@
+label {
+    color: blue; 
+} #rojo {
+    color: red;
+} 
+
+
+input:focus {
+    border-width: 2px;
+    border-color: darkslategrey;
+    border-style: solid;
+}
+
+h1{
+    color: magenta;
+}h1:hover{
+    color: goldenrod    ;
+  
+
+}
+#outlin:focus{
+    color: firebrick;
+}
+table:hover{
+    border-color: firebrick;
+    border-width: 3px;
+}
+td:hover{
+    color: mediumpurple;
+    border-width: 2px;
+}
+tr{
+    color: yellowgreen;
+    border-width: 2px;
+}
+table img {
+
+   
+    border: 2px solid #00f; /* Borde azul para imágenes en tablas */
+  } 
