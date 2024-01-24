@@ -1,0 +1,97 @@
+<html>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="./hoja de estilo.css">
+    <h1 align="center"> Formulario</h1>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+        
+        </style>
+    <table border="1" align="center">
+        <tr>
+            <td>
+                <label for="dni">DNI (*)</label>
+            </td>
+            <td>
+                <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]" maxlength="9" required>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <label for="telefono">Teléfono (*)</label>
+
+            </td>
+            <td>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9,14}" maxlength="14" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="rojo" for="contrasena">Contraseña (*)</label>
+            </td>
+            <td>
+                <input type="password" id="contrasena" name="contrasena" minlength="5" maxlength="10" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="diferente" for="nombre_apellidos">Nombre y Apellidos (*)</label>
+
+            </td>
+            <td>
+                <input type="text" id="nombre_apellidos" name="nombre_apellidos" maxlength="100" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="outlin" for="fecha">Fecha (*)</label>
+            </td>
+            <td>
+                <input type="date" id="fecha" name="fecha" required min="2023-01-01" max="2023-12-31">
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="agua_consumida">Cantidad de agua consumida (litros) (*)</label>
+            </td>
+            <td>
+                <input type="number" id="agua_consumida" name="agua_consumida" value="0.5" step="0.1" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="nivel_esfuerzo">Valoración del nivel de esfuerzo (1-10) (*)</label>
+            </td>
+            <td>
+                <input type="range" id="nivel_esfuerzo" name="nivel_esfuerzo" min="1" max="10" step="1" value="5"
+                    required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tipos">Tipos (*)</label>
+            </td>
+            <td>
+                <select id="Tipos" name="Tipos" required>
+                    <option value="aerobico">Aeróbico</option>
+                    <option value="anaerobico">Anaeróbico</option>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="imagen" >Imagen(*)</label>
+            </td>
+            <td>
+                <img src="./css.png" alt="imagen css">
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
