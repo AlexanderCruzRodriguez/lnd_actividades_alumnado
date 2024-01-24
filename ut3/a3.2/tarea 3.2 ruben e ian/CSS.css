@@ -1,0 +1,111 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el encabezado h1 */
+h1 {
+  color: #336699;
+  transition: background-color 0.3s;
+}
+
+h1:hover {
+  background-color: #f0f0f0;
+}
+
+h1 span {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+h1:hover span {
+  background-color: transparent;
+}
+
+/* Estilos para el formulario */
+form {
+  margin: 20px;
+}
+
+label {
+  color: #336699;
+}
+
+label.rojo {
+  color: red;
+}
+
+input[type="text"].borde-rojo {
+  border: 1px solid #ff0000;
+}
+
+input[type="text"].borde-outline {
+  outline: 2px solid #00ff00;
+}
+
+/* Estilos para las imágenes */
+img {
+  border: 2px solid;
+}
+
+table img {
+  border-color: blue;
+}
+
+div img {
+  border-color: green;
+}
+
+p img {
+  border-color: orange;
+}
+
+/* Otros estilos específicos para el formulario */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 8px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #336699;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #264d73;
+}
+
+/* Estilos para el selector de tipo de entrenamiento y salas utilizadas */
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el rango de nivel de esfuerzo */
+input[type="range"] {
+  width: 100%;
+}
+
+/* Estilos para el campo de email */
+input[type="email"] {
+  width: 100%;
+}
+
+/* Estilos para el campo de contraseña */
+input[type="password"] {
+  width: 100%;
+}
