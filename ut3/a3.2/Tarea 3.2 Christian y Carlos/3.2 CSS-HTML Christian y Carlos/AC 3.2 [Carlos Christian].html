@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Hojas Estilo 3.2</title>
+        <meta charset="UTF-8">
+        <!--INTERNA-->
+        <style>
+            table,
+            td,
+            tr  {border: 1px solid black;}
+        </style>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <!--INLINE-->
+        <h1 id="pruebah1" style="text-align: center;">AC 3.2 Hojas de Estilo</h1>
+        <form action="http://servidor/lnd_actividades_alumnado/ut3/a3.2" method="post">
+            <center>
+            <table>
+            <tr>
+                <!-- Principio De Tabla -->
+                <td>
+                    <label for="DNI">Inserte DNI*</label>
+                </td>
+
+                <td>
+                    <!--Borde campo rojo CSS-->
+                    <input class="campo-dni" type="text" id="DNI" name="DNI" required maxlength="9" placeholder="DNI">
+                </td>
+
+            <tr>
+
+                <td>
+                    <label for="NomreApellidos">Nombre y Apellidos*</label>
+                </td>
+
+                <td>
+                    <!--Borde campo verde HTML-->
+                    <input class="campo-nombreapellidos" type="text" id="NombreApellidos" name="NombreApellidos" required maxlength="100"
+                        placeholder="Nombre">
+                </td>
+
+            </tr>
+            <td>
+
+                <label for="Contraseña">Contraseña*</label>
+            </td>
+            <td>
+                <input type="password" id="Contraseña" name="Contraseña" required minlength="5" maxlength="10"
+                    placeholder="Contraseña">
+
+            </td>
+
+            <tr>
+                <td>
+                    <label for="telefono">Teléfono Contacto</label>
+                </td>
+                <td>
+                    <input type="tel" id="telefono" name="telefono" pattern="928-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                        placeholder="Teléfono 928-XX-XX" />
+                </td>
+
+                <br>
+            <tr>
+                <td>
+                    <label for="Email">Email*</label>
+                </td>
+                <td>
+                    <input type="text" id="email" name="email" pattern=".+@gmail\.com"
+                        placeholder="Formato: @gmail.com" required>
+                </td>
+            </tr>
+            <td>
+                <label for="Fecha entrenamiento">Fecha entrenamiento*</label>
+            </td>
+
+            <td>
+                <input type="date" id="Fecha entrenamiento" name="Fecha entrenamiento" min="2023-01-01"
+                    max="2023-12-31" required />
+            </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <label for="imagenes">Imágenes de entrenamiento (JPG):</label>
+                </td>
+
+                <td>
+                    <input type="file" id="imagenes" name="imagenes" accept=".JPG" multiple /> <!-- SOLO JPG -->
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="rutinapdf">Rutina de entrenamiento (PDF):</label>
+                </td>
+                <td>
+                    <input type="file" id="rutinapdf" name="rutinapdf" accept=".pdf" /> <!-- SOLO PDF -->
+                </td>
+
+            <tr>
+                <td>
+
+                    <label for="agua">Cantidad de agua consumida</label>
+                </td>
+
+                <td>
+                    <input id="agua" type="number" placeholder="1,5L Min" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="esfuerzo">Valoración de esfuerzo* (1=Sin esfuerzo, 10=Mucho esfuerzo)</label>
+                </td>
+                <td>
+                    <input type="range" id="esfuerzo" name="esfuerzo" list="numeros" min="0" max="10" required />
+
+                    <datalist id="numeros">
+                        <option value="0"></option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                        <option value="3"></option>
+                        <option value="4"></option>
+                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                    </datalist>
+                </td>
+
+            <tr>
+                <td>
+                    <label for="Tipo de entrenamiento">Tipo de entrenamiento*</label>
+                    <select name="tipoentrenamiento">
+                        <option value="aerobico" selected> Aeróbico</option>
+                        <option value="anaerobico"> Anaeróbico</option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label id="sala-utilizada" for="salas utilizadas">Salas Utilizadas*</label>
+                </td>
+                <td>
+                    <div>
+            <tr>
+                <td>
+                    <select name="salasutilizadas[]" id="salas" multiple required>
+                        <option value="pista_exterior">Pista exterior</option>
+                        <option value="piscina">Piscina</option>
+                        <option value="sala_musculacion">Sala de musculación</option>
+                        <option value="sala_spinning">Sala de spinning</option>
+                        <option value="sala_polivalente">Sala polivalente</option>
+                        <option value="zona_cardio">Zona cardio</option>
+                    </select>
+            </tr>
+            <tr>
+                <td>
+                    Imagen de prueba BORDES
+                </td>
+                <td>
+                    <img src="./img/Ducati_Scrambler800_Icon-dark.jpg" width="250">
+                </td>
+            </tr>
+
+            <!-- BOTONES -->
+            <tr>
+                <td>
+                    <input type="reset" value="Reset" />
+                </td>
+                <td>
+                    <input type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+        </center>
+        </form>
+        <p style="font-family:sans-serif; font-size: 16px; text-align: center;"><img src="./img/Ducati_Scrambler800_Icon-dark.jpg" width="250"></p>
+        <br>
+        <br>
+        <div style="text-align: center;">
+            <p>Prueba dentro de un DIV</p>
+            <img src="./img/Ducati_Scrambler800_Icon-dark.jpg" width="250">
+        </div>
+    </body>
+    
+</html>
