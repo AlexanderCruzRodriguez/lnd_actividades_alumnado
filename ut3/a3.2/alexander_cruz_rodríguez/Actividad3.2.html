@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Actividad 3.2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <script src='main.js'></script>
+    <style>
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="reset"] {
+            background-color: #dc3545;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="recibformulario.php" method="get/post">
+        <h1 align="center" class="h1">Formulario</h1>
+        <table align="center">
+    
+            <tr>
+                <td colspan="2"><h2>Registro Personal</h2></td>
+            </tr>
+            <tr>
+                <td><label for="dni">DNI</label></td>
+                <td><input type="text" id="dni" name="dni" maxlength="9" required></td>
+            </tr>
+            <tr>
+                <td><label for="nombre_apellidos">Nombre y Apellidos</label></td>
+                <td><input type="text" id="nombre_apellidos" name="nombre_apellidos" maxlength="100" required></td>
+            </tr>
+            <tr>
+                <td><label for="contrasena" class="contrasena">Contraseña</label></td>
+                <td><input type="password" id="contrasena" name="contrasena" minlength="5" maxlength="10" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefono">Teléfono</label></td>
+                <td><input type="tel" id="telefono" name="telefono" pattern="\d{3}-\d{2}-\d{2}-\d{2}" placeholder="Ej. 928-XX-XX-XX"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" name="email" pattern="^[a-zA-Z0-9_.+-]+@gmail\.com$" required></td>
+            </tr>
+            <tr>
+                <td><label for="fecha_nacimiento">Fecha de nacimiento</label></td>
+                <td><input type="date" id="fecha_nacimiento" name="fecha_nacimiento" min="1920-01-01" max="2023-12-31" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="imagenes_libro_familia">Imagenes del libro de familia:</label>
+                </td>
+                <td>
+                    <input type="file" id="imagenes_libro_familia" name="imagenes_libro_familia" accept="image/jpeg" multiple>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="estudios_actualmente">Estudios actualmente</label>
+                </td>
+                <td>
+                    <input type="file" id="estudios_actualmente" name="estudios_actualmente" accept=".pdf">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Valoración_salario">Valoración del salario</label>
+                </td>
+                <td>
+                    <input type="range" id="Valoración_salario" name="Valoración_salario" min="1" max="10" step="1" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="estudios_actualmente" name="estudios_actualmente" required>
+                        <option value="aerobico">ESO</option>
+                        <option value="anaerobico">Bachillerato</option>
+                        <option value="anaerobico">FP media</option>
+                        <option value="anaerobico">FP superior</option>
+                        <option value="anaerobico">Carrera universitaria</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Enviar</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </form>
+</body>
+</html>
